@@ -5,7 +5,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
               My News
@@ -25,13 +25,12 @@ export default class Navbar extends Component {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul
+                className="navbar-nav me-auto mb-2 mb-lg-0 "
+                style={{ textTransform: "capitalize" }}
+              >
                 <li className="nav-item">
-                  <Link
-                    className="nav-link active"
-                    aria-current="page"
-                    to="/Home"
-                  >
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
                   </Link>
                 </li>
@@ -65,11 +64,6 @@ export default class Navbar extends Component {
                 <li className="nav-item">
                   <Link className="nav-link active" to="/technology">
                     technology
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link active" to="/Contact">
-                    Contact
                   </Link>
                 </li>
               </ul>
