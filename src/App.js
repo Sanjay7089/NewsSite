@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-export default class App extends Component {
-  render() {
+const App = (props)=>  {
+  
     return (
       <div>
         <Router>
@@ -105,7 +104,7 @@ export default class App extends Component {
               {" "}
               <News
                 key="technology"
-                pageSize={6}
+                 pageSize={6}
                 country="in"
                 category="technology"
               />{" "}
@@ -114,5 +113,5 @@ export default class App extends Component {
         </Router>
       </div>
     );
-  }
 }
+export default App;
